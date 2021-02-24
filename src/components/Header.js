@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <h1>Welcome to the Land of Surveys!</h1>
-      <Link to="/SurveyList">Survey List</Link><br/>
+      <Link to="/Signin">Sign in Here</Link><br/>
       <Link to="/Surveys">Surveys</Link>
     </>
   )
