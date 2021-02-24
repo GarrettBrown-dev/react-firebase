@@ -3,7 +3,7 @@
 import React from 'react';
 import Header from './Header';
 import SurveyControl from './SurveyControl';
-import SurveyList from './SurveyList';
+import Signin from './Signin';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     <Router>
       <Header />
       <Switch>
-        <Route path="/SurveyList">
-          <SurveyList />
+        <Route path="/Signin">
+          <Signin />
         </Route>
         <Route path="/Surveys">
           <SurveyControl />
