@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import firebase from 'firebase';
+import 'firebase/auth';
+import {
+  FirebaseAuthProvider,
+  // FirebaseAuthConsumer,
+  // IfFirebaseAuthed,
+  // IfFirebaseAuthedAnd
+} from "@react-firebase/auth";
+
+
+const rrfProps = {
+  firebase,
+  config: {
+    userProfiles: "users",
+    useFirestoreForProfile: true,
+  },
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <FirebaseAuthProvider {...rrfProps}>
     <App />
-  </React.StrictMode>,
+  </FirebaseAuthProvider>,
   document.getElementById('root')
 );
 
