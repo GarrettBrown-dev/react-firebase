@@ -10,7 +10,7 @@ db.collection("test")
   });
 
 function Survey(props) {
-  console.log(props.props)
+  console.log(props.data)
   const handleFormSubmission = (e) => {
     e.preventDefault();
     db.collection("answers")
