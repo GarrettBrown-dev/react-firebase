@@ -56,6 +56,8 @@ function Signin() {
       placeholder='Password' />
       <button type='submit'>Sign in</button>
       </form>
+      <h1>Sign Out</h1>
+      <button onClick={doSignOut}>Sign out</button>
       </>
     );
   }
