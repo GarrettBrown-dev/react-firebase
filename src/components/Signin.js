@@ -9,6 +9,23 @@ function Signin() {
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       console.log("Signed Up!")
     }).catch(function(error) {
+      console.log(error.message); // make visible to user eventually
+    });
+  }
+  function doSignIn(event) {
+    event.preventDefault();
+    const email = event.target.signinEmail.value;
+    const password = event.target.signinPassword.value;
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      console.log("Successfully signed in!");
+    }).catch(function(error) {
+      console.log(error.message);
+    });
+  }
+  function doSignOut() {
+    firebase.auth().signOut().then(function() {
+      console.log("Successfully signed out!");
+    }).catch(function(error) {
       console.log(error.message);
     });
   }
@@ -27,8 +44,20 @@ function Signin() {
       placeholder='Password' />
       <button type='submit'>Sign up</button>
     </form>
-    </>
-  );
-}
+    <h1>Sign In!</h1>
+    <form onSubmit={doSignIn}>
+      <input
+      type='text'
+      name='signinEmail'
+      placeholder='email'/>
+      <input
+      type='password'
+      name='signinPassword'
+      placeholder='Password' />
+      <button type='submit'>Sign in</button>
+      </form>
+      </>
+    );
+  }
 
 export default Signin;
