@@ -2,13 +2,24 @@
 // import './App.css';
 import React from 'react';
 import Header from './Header';
-import Survey from './Survey';
+import SurveyControl from './SurveyControl';
+import SurveyList from './SurveyList';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
+    <Router>
       <Header />
-      <Survey />
+      <Switch>
+        <Route path="/SurveyList">
+          <SurveyList />
+        </Route>
+        <Route path="/Surveys">
+          <SurveyControl />
+        </Route>
+      </Switch>
+    </Router>
     </>
   );
 }

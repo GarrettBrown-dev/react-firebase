@@ -9,28 +9,29 @@ db.collection("test")
     console.log(data);
   });
 
-function Survey() {
+function Survey(props) {
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
-    db.collection("test")
+    db.collection("answers")
       .doc(v4())
       .set({
         question1: e.target.question1.value,
         question2: e.target.question2.value,
         question3: e.target.question3.value,
       })
-      .then(() => {
-        console.log("submiotted!")
+      .then(function(message) {
+        message = "submoitted!";
+        console.log(message);
+      }, function(){console.log("Not submoitted!")});
         // NotificationManager.success("A new survey answer has been added", "Success");
-      })
-  }
-
-  return (
+      }
+  
+    return(
     <>
       <form onSubmit={handleFormSubmission}>
         <label>
-          Question 1:</label>
+          {props.question1}</label>
         <input type="text" name="question1" />
         <label>
           Question 2:</label>
