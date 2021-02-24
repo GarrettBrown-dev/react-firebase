@@ -13,7 +13,7 @@ function SurveyList(){
     <>
       <h1>this is the survey list dude!</h1>
       <Link to="/">Home</Link>
-      <Survey props={data}/>
+      <Survey data={data}/>
     </>
   )
 }

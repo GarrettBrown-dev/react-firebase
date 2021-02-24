@@ -1,7 +1,8 @@
 import React from 'react';
 import Survey from './Survey';
+import SurveyList from './SurveyList';
 // import { db } from '../firebase';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class SurveyControl extends React.Component {
   constructor(props) {
@@ -21,13 +22,11 @@ class SurveyControl extends React.Component {
     if(this.state.answering){
       currentlyVisibleState = <Survey onSurveyClick={this.handleSurveyClick}/>
     } else {
-      
+      currentlyVisibleState = <SurveyList />
     }
   return (
     <>
       {currentlyVisibleState}
-      <br/>
-      <Link to="/">Header</Link>
     </>
     );
   }

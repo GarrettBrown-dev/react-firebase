@@ -31,13 +31,13 @@ function Survey(props) {
     <>
       <form onSubmit={handleFormSubmission}>
         <label>
-          {props.props.question1}</label>
+          {props.data.question1}</label>
         <input type="text" name="question1" />
         <label>
-          Question 2:</label>
+          {props.data.question2}</label>
         <input type="text" name="question2"></input>
         <label>
-          Question 3:</label>
+          {props.data.question3}</label>
         <input type="text" name="question3"></input>
         <input type="submit" value="Submit" />
       </form>
