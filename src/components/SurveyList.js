@@ -1,7 +1,8 @@
 import React from 'react';
+import Survey from './Survey';
 import { Link } from 'react-router-dom';
 
-let data = {
+let data = { //maybe get data from firestore here?
   question1: "what?",
   question2: "who?",
   question3: "where?"

@@ -10,7 +10,7 @@ db.collection("test")
   });
 
 function Survey(props) {
-
+  console.log(props.props)
   const handleFormSubmission = (e) => {
     e.preventDefault();
     db.collection("answers")
@@ -31,7 +31,7 @@ function Survey(props) {
     <>
       <form onSubmit={handleFormSubmission}>
         <label>
-          {props.question1}</label>
+          {props.props.question1}</label>
         <input type="text" name="question1" />
         <label>
           Question 2:</label>
