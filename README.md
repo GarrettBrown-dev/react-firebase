@@ -3,11 +3,28 @@
 #### _React Firebase Project for Epicodus_
 #### _DATE 02.25.2021_
 
-#### ✒️ By _**Tawnee Harris, Patrick Osten, Garrett Dean Brown, and Cory Nordenbrock**_
+<p align="center">
+    <br>
+    <a href="https://github.com/tawneeh">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/71858037?s=460&u=497be411378130077cfd7c96ef036db99fbc4b55&v=4">
+    </a>
+    <a href="https://github.com/POsten040">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/72632557?s=460&u=1f9c47518fd52268a424582dae3f5de5c3f241de&v=4">
+    </a>
+        <a href="https://github.com/cordenbrock">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/38296053?s=460&u=1509ff5025e71b26ec55ec518b5db64a37ba6176&v=4">
+    </a>
+        <a href="https://github.com/GarrettBrown-dev">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars1.githubusercontent.com/u/69095640?s=460&u=eefe493b85312d332eedc271ee24a39d586446ae&v=4">
+    </a>
+</p>
+
+#### ✒️ By _**Tawnee Harris, Patrick Osten, Garrett Dean Brown and Cory Nordenbrock**_
+<br>
 
 ## 📋 Description
 
-This application... 
+This application is a practice project that was made using create-react-app and includes Firebase as a Backend as a Service and Firestore as a database solution. Users have the ablility to sign up, sign in and submit answers to a survey. The answers are successfully stored in the 'answers' collection in the Firestore.
 
 ## ⚙️ Setup/Installation Requirements
 
@@ -43,6 +60,8 @@ Please feel free to reach out to us anytime
 
 * React
 * JavaScript
+* Firebase
+* Firestore
 * JSX
 * Webpack
 * Babel
