@@ -1,6 +1,7 @@
 import React from 'react';
 import { db } from '../firebase';
 import { v4 } from 'uuid';
+import Button from '@material-ui/core/Button';
 
 db.collection("test")
   .get()
@@ -34,6 +35,8 @@ function Survey(props) {
     // NotificationManager.success("A new survey answer has been added", "Success");
   }
 
+
+
   return (
     <>
       <form onSubmit={handleFormSubmission}>
@@ -46,7 +49,7 @@ function Survey(props) {
         <label>
           {data.question3}</label>
         <input type="text" name="question3"></input>
-        <input type="submit" value="Submit" />
+        <Button variant="contained" color="primary" id="btn" type="submit" value="Submit">Submit!</Button>
       </form>
     </>
   )

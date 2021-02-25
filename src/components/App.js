@@ -5,10 +5,14 @@ import Header from './Header';
 import SurveyControl from './SurveyControl';
 import Signin from './Signin';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 function App() {
   return (
     <>
+      <Button variant="contained" color="primary">
+        Hey, my Dudes
+      </Button>
       <Router>
         <Header />
         <Switch>
