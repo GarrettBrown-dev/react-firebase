@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from "firebase/app";
-import TextField from '@material-ui/core/TextField';
-
+import {TextField, Button} from '@material-ui/core';
+// import { useState } from 'react';
 
 function Signin() {
   function doSignUp(event) {
@@ -32,8 +32,17 @@ function Signin() {
       console.log(error.message);
     });
   }
-
-
+  const signUpStyle = { // CSS Object. different syntax from plain CSS. add as style={whateverStyle}
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
+  }
+  const signInStyle = {
+    background: 'linear-gradient(45deg, #61889e 30%, #59a680 90%)'
+  }
+  // let [style, setStyle] = useState(signUpStyle);
+  // function applyHoverStyle() {
+  //   return signInStyle;
+  // }
+  // onMouseEnter={applyHoverStyle}
 
   return (
     <>
@@ -47,7 +56,7 @@ function Signin() {
           type='password'
           name='password'
           placeholder='Password' />
-        <button type='submit'>Sign up</button>
+        <Button  variant="contained" style={signUpStyle}  id="signUp" type='submit'>Sign up</Button>
       </form>
       <h1>Sign In!</h1>
       <form onSubmit={doSignIn}>
@@ -59,13 +68,13 @@ function Signin() {
           type='password'
           name='signinPassword'
           placeholder='Password' />
-        <button type='submit'>Sign in</button>
+        <Button variant="contained" style={signInStyle} id="signOut" type='submit'>Sign in</Button>
       </form>
       <h1>Sign Out</h1>
-      <button onClick={doSignOut}>Sign out</button>
+      <Button variant="contained" color="secondary" onClick={doSignOut}>Sign out</Button>
 
     </>
   );
-}
+  }
 
 export default Signin;
