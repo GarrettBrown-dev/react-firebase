@@ -3,7 +3,6 @@ import { db } from '../firebase';
 import { v4 } from 'uuid';
 import Button from '@material-ui/core/Button';
 
-
 // db.collection("test")
 //   .get()
 //   .then(querySnapshot => {
@@ -37,9 +36,7 @@ function Survey(props) {
         .then(answers=> {return answers;})
         
       }, function () { console.log("Not submoitted!") });
-    // NotificationManager.success("A new survey answer has been added", "Success");
   }
-
 
   return (
     <>

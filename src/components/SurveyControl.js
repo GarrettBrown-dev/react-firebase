@@ -3,6 +3,7 @@ import Survey from './Survey';
 import SurveyList from './SurveyList';
 import 'firebase/auth';
 import firebase from 'firebase';
+import { db } from '../firebase';
 // import { db } from '../firebase';
 // import { Link } from 'react-router-dom';
 
@@ -15,12 +16,22 @@ class SurveyControl extends React.Component {
     };
   }
 
-  handleSurveyClick = () => {
-    console.log("Handle survey click activated")
-    this.setState({answering: !this.state.answering});
+  handleSurveyClick = (answers) => {
+    console.log("Handle survey click activated");
+    this.setState({
+      masterSurveyList: answers,
+      answering: !this.state.answering
+    })
+    
   }
+  // db.collection("answers")
+  // .get()
+  // .then(querySnapshot => {
+  //   const answers = querySnapshot.docs.map(doc => doc.data());
+  //   console.log(answers);
+  // });
   render() {
-    console.log(this.state.answering)
+    console.log(this.state.masterSurveyList) // undefined!
     let currentlyVisibleState = null;
     let user = firebase.auth().currentUser;
     if (user == null) {
